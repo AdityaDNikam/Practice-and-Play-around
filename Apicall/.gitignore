@@ -1,0 +1,25 @@
+# Sensitive files containing API keys
+.env
+*.env
+.env.*
+
+# Python Virtual Environment
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
+venv/
+env/
+.venv/
+
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE & OS cache
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

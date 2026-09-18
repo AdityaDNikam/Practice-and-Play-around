@@ -1,0 +1,19 @@
+# Virtual environment internal folders & configs
+venv/Lib/
+venv/Scripts/
+venv/Include/
+venv/pyvenv.cfg
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables & secrets
+.env
+venv/.env
+.env.local
+
+# IDE & system files
+.vscode/
+.idea/
+.DS_Store

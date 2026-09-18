@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Todo Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-clipboard-list"></i> TaskMaster</h1>
+            <p>Organize your day, achieve your goals</p>
+        </header>
+
+        <div class="todo-app">
+            <!-- Input Section -->
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+                <select id="priorityInput">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button id="addTaskBtn"><i class="fa-solid fa-plus"></i> Add Task</button>
+            </div>
+
+            <!-- Controls & Filters -->
+            <div class="controls">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <div class="task-stats">
+                    <span id="taskCount">0 tasks left</span>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <ul id="taskList" class="task-list">
+                <!-- Dynamic Tasks go here -->
+            </ul>
+
+            <!-- Footer Actions -->
+            <div class="footer-actions">
+                <button id="clearCompletedBtn">Clear Completed</button>
+                <button id="clearAllBtn">Clear All</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
