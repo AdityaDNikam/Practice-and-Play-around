@@ -34,8 +34,9 @@ DB_URL = "mongodb://localhost:27017"
 with MongoDBSaver.from_conn_string(DB_URL) as checkpoint:
     graph_with_checkpoint = graph_builder.compile(checkpointer = checkpoint)
     config = {"configurable" : {"thread_id" : "User_1"}}
-    graph = graph_with_checkpoint.invoke(
-        {"message" : ["Please describe in a few words, what do you know about me?"]},config
-    )
-    
-print(graph)
+    for chunk in graph_with_checkpoint.stream(
+        {"message" : ["Please describe in a few words, what do you know about me?"]},
+        config,
+        stream_mode="values"
+    ):
+        chunk["message"][-1].pretty_print()
